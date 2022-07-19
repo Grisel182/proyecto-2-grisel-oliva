@@ -1,0 +1,315 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;600&family=Rubik:wght@300&display=swap');
+
+
+
+/* GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    background-color: hsl(276, 28%, 93%);
+    color: #0f0f0f;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a#cv {
+    background-color: #af599e;
+    color: #fbfbfb;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    display: inline-block;
+}
+a#cv:hover {
+    background-color: rgba(175, 89, 158, 0.8);
+    transition: background-color 0.3s;
+}
+h1 {
+    font-size: 48px;
+    text-align: left;
+}
+h2 {
+    font-size: 32px;
+}
+p {
+    margin: 16px 0;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    height: 90px;
+    width: 100%;
+    background-color: #e4aeee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 3px 10px -5px #5f5f5f;
+}
+
+.logo {
+    width: 85px;
+    margin-left: 16px;
+}
+
+#menu-button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    width: 40px;
+    height: 40px;
+
+}
+
+/* MENU */
+nav{
+    display: none;
+}
+
+ul#menu {
+    display: flex;
+    font-size: 20px;
+}
+
+li.menu-items a {
+    padding: 16px;
+    display: inline-block;
+}
+
+li.menu-items:hover {
+    background: rgba(175, 89, 158, 0.3);
+    transition: background-color 0.3s;
+}
+
+img#close {
+    display: none
+}
+
+body.mobile-menu-active img#close {
+    display: block;
+}
+
+body.mobile-menu-active img#open {
+    display: none;
+}
+
+body.mobile-menu-active header {
+    height: 100vh;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    transition: height 0.3s;
+}
+
+body.mobile-menu-active nav{
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+
+body.mobile-menu-active ul#menu {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+body.mobile-menu-active {
+    overflow: hidden;
+}
+
+/* MAIN */
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    min-height: 100vh;
+    padding-top: 90px;
+}
+
+/* INICIO */
+section#inicio {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+figure.presentacion {
+    margin-bottom: 20px;
+}
+
+figure.presentacion img {
+    border-radius: 100%;
+    width: 280px;
+    max-width: 90%;
+}
+
+article#bienvenida {
+    width: 50%;
+}
+
+/* CONTACTO */
+section#contacto p {
+    text-align: center;
+    max-width: 600px;
+}
+
+article.hablemos {
+    background: rgba(175, 89, 158, 0.3);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+ul#links {
+    display: flex;
+    margin-top: 20px;
+    /* max-width: 100%; */
+}
+
+ul#links li {
+    margin: 32px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+ul#links li:hover {
+    background: rgba(175, 89, 158, 0.3);
+    transition: background-color 0.3s;
+}
+
+img.social {
+    width: 80px;
+}
+
+/* MIS PROYECTOS */
+#juegos {
+   padding: 10px; 
+}
+
+/* FOOTER */
+footer {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #af599e;
+    color: #fbfbfb;
+}
+
+/*AJUSTES MOBILE*/
+
+@media (max-width: 767px) {
+    /*FOTO Y TEXTO INICIO*/
+
+    #menu-button {
+        display: block;
+    }
+    section#inicio {
+        flex-direction: column;
+    }
+
+    figure.presentacion img {
+        width: 210px;
+    }
+
+    article#bienvenida{
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        margin: 30px 0;
+        /*texto chiquito ver*/
+    }
+    a {
+        text-align: center;
+    }
+    /*SECCION CONTACTO*/
+    section#contacto {
+        width: 90%;
+        margin: 20px;
+    }
+
+    ul#links li {
+        margin: 5px;
+    }
+
+}
+
+/*AJUSTES TABLET (usando ipad como referencia)*/
+
+@media (min-width: 768px) {
+    menu-button {
+        display: block;
+    }
+
+    section#inicio {
+        flex-direction: column;
+    }
+
+    figure.presentacion img {
+        width: 350px;
+    }
+
+    article#bienvenida{
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+        margin: 40px 0;
+        font-size: 30px;
+    }
+    a#cv{
+        font-size: 30px;
+    }
+    ul#menu {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1200px){
+    menu-button {
+        display: none;
+    }
+    section#inicio {
+        flex-direction: row;
+    }
+}
+
