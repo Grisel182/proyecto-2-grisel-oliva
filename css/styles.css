@@ -202,9 +202,6 @@ img.social {
    padding: 10px; 
 }
 
-.proyectos {
-    padding: 15px;
-}
 
 /* FOOTER */
 footer {
@@ -261,6 +258,13 @@ footer {
     ul#links li {
         margin: 5px;
     }
+
+    /* Seccion proyectos */
+    .proyectos {
+        padding: 15px;
+    }
+
+
 
 }
 
